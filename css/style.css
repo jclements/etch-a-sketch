@@ -1,0 +1,30 @@
+#wrap {
+	margin: 0 auto;
+}
+
+.element {
+	background-color: white;
+	margin: 1px;
+	border: solid 1px black;
+	float: left;
+	overflow:hidden;
+}
+
+.row {
+	display:block;
+	margin: auto;
+}
+
+.menu {
+	text-align: center;
+	margin: 20px auto 40px;
+
+}
+
+.blue {
+	background-color: blue;
+}
+
+.lightblue {
+	background-color: lightblue;
+}
