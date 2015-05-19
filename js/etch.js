@@ -5,24 +5,28 @@ var elementSize = 25;
 var totalWidth = 384;
 
 $(document).ready(function() {
-	drawGrid(16);
+	var grid=initialGridSize;
 	
+	if(window.location.search) {
+		var query=window.location.search.split("=");
+		grid=query[1];
+		
+	}
+	
+	drawGrid(grid);
 
 	$(".element").hover(function(){
-		alert('working');
 		$(this).toggleClass("blue");
 	},
 	function(){
-		$(this).toggleClass("blue");
-		$(this).addClass("lightblue");
+		$(this).css("background-color","blue");
+		$(this).css("background-color","lightblue");
 	});
 
-	
+
 	$(".menu > button").click(function(){
-			$(".element").css("background-color","white");
 			var newSize = prompt("How big?");
-			$('#wrap').empty();
-			drawGrid(newSize); 
+			window.location.search = 'grid='+newSize;
 	});
 
 });
